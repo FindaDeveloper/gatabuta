@@ -1,0 +1,3 @@
+include ':gatabuta'
+include ':sample'
+rootProject.name = "Gatabuta"
