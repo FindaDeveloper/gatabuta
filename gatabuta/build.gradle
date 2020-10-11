@@ -25,7 +25,5 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
 
     implementation 'junit:junit:4.13'
+    implementation 'org.mockito:mockito-core:3.5.13'
 }
-
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"

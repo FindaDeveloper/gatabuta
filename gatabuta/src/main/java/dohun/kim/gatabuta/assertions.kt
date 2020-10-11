@@ -64,3 +64,21 @@ infix fun <T : CharSequence> LiveData<T>.hasLength(expected: Int) {
     val actual = value?.length
     assertEquals(expected, actual)
 }
+
+fun <T> LiveData<T>.hasNoValue() {
+    try {
+        getOrAwaitValue()
+        fail()
+    } catch (e: TimeoutException) {
+    }
+}
+
+fun <T> LiveData<T>.isNull() {
+    val value = getOrAwaitValue()
+    assertNull(value)
+}
+
+fun <T> LiveData<T>.isNotNull() {
+    val value = getOrAwaitValue()
+    assertNotNull(value)
+}
