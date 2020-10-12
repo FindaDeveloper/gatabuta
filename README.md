@@ -14,7 +14,7 @@ allprojects {
 }
 
 dependencies {
-  implementation 'com.github.kimdohun0104:gatabuta:$gatabuta_version'
+  testImplementation 'com.github.kimdohun0104:gatabuta:$gatabuta_version'
 }
 ```
 
