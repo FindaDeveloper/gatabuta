@@ -2,7 +2,59 @@
 ```
 가타부타 - 어떤 일을 옳다, 그르다 함
 ```
-가타부타는 중위 연산자를 활용해 안드로이드 단위 테스트를 빠르고 쉽게 작성할 수 있도록 지원합니다.  
+가타부타는 안드로이드 LiveData 테스트를 쉽고 빠르게 작성할 수 있도록 지원합니다.  
+테스트를 작성할 때 프로그래머가 고려할 부분을 최대한 배제할 수 있도록 기능을 향상하고 있습니다.  
+
+가타부타를 사용하기 전에 [Unit-testing LiveData and other common observability problems](https://medium.com/androiddevelopers/unit-testing-livedata-and-other-common-observability-problems-bb477262eb04)를 참고하는 것을 권장드립니다.
+가타부타는 내부적으로 LiveData에서 값을 얻기 위해서 해당 글의 내용을 참고했습니다.
+
+### 기능
+``` kotlin
+/**
+ * 현재 LiveData의 값을 얻어옵니다.
+ * LiveData가 관찰되지 않아 값을 항상 null을 반환하는 경우(Transformations, MediatorLiveData 등)를
+ * 내부적으로 처리하여 항상 정상적인 데이터를 기대할 수 있습니다.
+ */
+liveData.test.value
+
+liveData.test equalTo "value" // assertEquals("value", liveData.test.value)
+liveData.test notEqualTo "value" // assertNotEquals("value", liveData.test.value)
+
+/**
+ * LiveData의 값이 설정되지 않으면 내부적으로 TimeoutException을 던집니다.
+ * hasValue, hasNoValue는 해당 예외가 여부에 따라 동작합니다.
+ */
+liveData.test.hasValue() 
+liveData.test.hasNoValue()
+
+/**
+ * liveData.test.value의 반환형은 null을 허용하지 않습니다.
+ * 만약 value의 값이 null이라면 NullLiveDataException을 던집니다.
+ * isNull, isNotNull은 해당 예외 여부에 따라 동작합니다
+ */
+liveData.test.isNull()
+liveData.test.isNotNull()
+ 
+/**
+ * Collections
+ */
+collectionLiveData.test hasSize 4 // assertEquals(4, collectionLiveData.test.value.size)
+collectionLiveData.test.isEmpty()
+collectionLiveData.test.isNotEmpty()
+
+/**
+ * Booleans
+ */
+boolLiveData.test.isTrue()
+boolLiveData.test.isFalse()
+
+/**
+ * CharSequences
+ */ 
+charSequencesLiveData.test.hasLength 4
+charSequencesLiveData.test.isBlank()
+charSequencesLiveData.test.isEmpty()
+```
 
 ### Download [![](https://jitpack.io/v/kimdohun0104/gatabuta.svg)](https://jitpack.io/#kimdohun0104/gatabuta)
 ``` groovy
