@@ -11,7 +11,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/gatabuta" />
+            <option value="$PROJECT_DIR$/gatabuta-livedata" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

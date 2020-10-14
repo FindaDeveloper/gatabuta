@@ -1,8 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='com.github.kimdohun0104'
 
 android {
     compileSdkVersion 30
@@ -25,8 +22,6 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
-
     implementation 'junit:junit:4.13'
-    implementation 'org.mockito:mockito-core:3.5.13'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
 }

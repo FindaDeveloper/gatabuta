@@ -1,2 +1,2 @@
-include ':gatabuta'
+include ':gatabuta-livedata'
 rootProject.name = "Gatabuta"
