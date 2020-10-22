@@ -24,11 +24,11 @@ infix fun <T> LiveData<T>.test(block: LiveDataTest<T>.() -> Unit) {
  * Assertion extensions
  */
 infix fun <T> LiveDataTest<T>.equalTo(expected: Any?) {
-    assertEquals(value, expected)
+    assertEquals(expected, value)
 }
 
 infix fun <T> LiveDataTest<T>.notEqualTo(expected: Any?) {
-    assertNotEquals(value, expected)
+    assertNotEquals(expected, value)
 }
 
 fun <T> LiveDataTest<T>.hasValue() {
