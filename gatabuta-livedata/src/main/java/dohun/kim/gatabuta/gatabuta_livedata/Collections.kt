@@ -7,12 +7,6 @@ infix fun <T : Collection<*>> LiveDataTest<T>.hasSize(expected: Int?) {
     Assert.assertEquals(expected, value.size)
 }
 
-fun <T : Collection<*>> LiveDataTest<T>.isNullOrEmpty() {
-    if (!value.isNullOrEmpty()) {
-        fail()
-    }
-}
-
 fun <T : Collection<*>> LiveDataTest<T>.isEmpty() {
     if (!value.isEmpty()) {
         fail()
