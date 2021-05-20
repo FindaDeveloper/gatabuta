@@ -3,10 +3,10 @@ package dohun.kim.gatabuta.gatabuta_livedata
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 
-fun LiveDataTest<Boolean>.isTrue() {
-    assertTrue(value)
+suspend fun LiveDataTest<Boolean>.isTrue() {
+    assertTrue(value() == true)
 }
 
-fun LiveDataTest<Boolean>.isFalse() {
-    assertFalse(value)
+suspend fun LiveDataTest<Boolean>.isFalse() {
+    assertFalse(value() == true)
 }
