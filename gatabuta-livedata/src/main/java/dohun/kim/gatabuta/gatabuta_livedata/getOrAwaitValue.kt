@@ -14,7 +14,7 @@ import kotlinx.coroutines.withTimeout
  */
 internal suspend fun <T> LiveData<T>.getOrAwaitValue(): T? =
     try {
-        withTimeout(500) {
+        withTimeout(200) {
             this@getOrAwaitValue.asFlow().first()
         }
     } catch (e: TimeoutCancellationException) {
