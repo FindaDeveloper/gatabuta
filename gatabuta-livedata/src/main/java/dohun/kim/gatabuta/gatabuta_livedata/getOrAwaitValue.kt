@@ -12,7 +12,7 @@ import kotlinx.coroutines.withTimeout
  *
  * @link https://medium.com/androiddevelopers/unit-testing-livedata-and-other-common-observability-problems-bb477262eb04
  */
-internal suspend fun <T> LiveData<T?>.getOrAwaitValue(): T? =
+internal suspend fun <T> LiveData<out T>.getOrAwaitValue(): T? =
     try {
         withTimeout(200) {
             this@getOrAwaitValue.asFlow().first()
