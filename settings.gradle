@@ -1,3 +1,3 @@
-include ':gatabuta-livedata'
-rootProject.name = "Gatabuta"
+include ':gatabuta'
 include ':example'
+rootProject.name = "Gatabuta"

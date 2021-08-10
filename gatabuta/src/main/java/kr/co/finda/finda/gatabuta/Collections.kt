@@ -1,4 +1,4 @@
-package dohun.kim.gatabuta.gatabuta_livedata
+package kr.co.finda.finda.gatabuta
 
 import org.junit.Assert
 import org.junit.Assert.fail

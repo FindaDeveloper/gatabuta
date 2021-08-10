@@ -1,4 +1,4 @@
-package dohun.kim.gatabuta.gatabuta_livedata
+package kr.co.finda.finda.gatabuta
 
 import androidx.lifecycle.LiveData
 import org.junit.Assert.*
