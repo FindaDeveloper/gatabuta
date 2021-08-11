@@ -1,25 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-group = 'com.github.kimdohun0104.gatabuta'
-
-android {
-    compileSdkVersion 30
-
-    defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 30
-
-        consumerProguardFiles "consumer-rules.pro"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-}
+apply from: rootProject.file('gradle/androidModule.gradle')
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
