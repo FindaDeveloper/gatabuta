@@ -13,7 +13,7 @@ suspend fun <T : Collection<*>> LiveDataTest<T>.isEmpty() {
     }
 }
 
-suspend fun <T: Collection<*>> LiveDataTest<T>.isNotEmpty() {
+suspend fun <T : Collection<*>> LiveDataTest<T>.isNotEmpty() {
     if (value()?.isEmpty() == true) {
         fail()
     }

@@ -18,4 +18,3 @@ suspend fun <T : CharSequence> LiveDataTest<T>.isEmpty() {
         fail()
     }
 }
-

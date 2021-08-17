@@ -31,7 +31,3 @@ suspend fun <T> LiveDataTest<T>.isNull() {
 suspend fun <T> LiveDataTest<T>.isNotNull() {
     assertNotNull(value())
 }
-
-
-
-
