@@ -1,7 +1,7 @@
 package kr.co.finda.finda.gatabuta
 
 import androidx.lifecycle.LiveData
-import org.junit.Assert.*
+import org.junit.jupiter.api.Assertions.*
 
 class LiveDataTest<out T>(private val liveData: LiveData<T>) {
     suspend fun value(): T? = liveData.getOrAwaitValue()

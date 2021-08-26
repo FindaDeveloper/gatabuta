@@ -1,11 +1,11 @@
+import kr.co.finda.finda.buildsrc.DependencyInfo
+
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 apply from: rootProject.file('gradle/androidModule.gradle')
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
-    implementation 'junit:junit:4.13'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation DependencyInfo.Test.junitJupiterApi
+    implementation DependencyInfo.AndroidX.Lifecycle.liveDataKtx
 }
