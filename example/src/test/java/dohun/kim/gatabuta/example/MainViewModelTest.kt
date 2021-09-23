@@ -1,10 +1,10 @@
 package dohun.kim.gatabuta.example
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import dohun.kim.gatabuta.gatabuta_livedata.equalTo
-import dohun.kim.gatabuta.gatabuta_livedata.isNull
-import dohun.kim.gatabuta.gatabuta_livedata.test
 import kotlinx.coroutines.runBlocking
+import kr.co.finda.finda.gatabuta.equalTo
+import kr.co.finda.finda.gatabuta.isNull
+import kr.co.finda.finda.gatabuta.test
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

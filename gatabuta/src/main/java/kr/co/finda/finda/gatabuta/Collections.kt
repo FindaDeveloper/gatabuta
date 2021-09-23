@@ -1,20 +1,22 @@
 package kr.co.finda.finda.gatabuta
 
-import org.junit.Assert
-import org.junit.Assert.fail
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.fail
 
 suspend infix fun <T : Collection<*>> LiveDataTest<T>.hasSize(expected: Int?) {
-    Assert.assertEquals(expected, value()?.size)
+    assertEquals(expected, value()?.size)
 }
 
 suspend fun <T : Collection<*>> LiveDataTest<T>.isEmpty() {
-    if (value()?.isNotEmpty() == true) {
-        fail()
+    val value = value()
+    if (value?.isNotEmpty() == true) {
+        fail("Value is not empty, value=$value")
     }
 }
 
 suspend fun <T: Collection<*>> LiveDataTest<T>.isNotEmpty() {
-    if (value()?.isEmpty() == true) {
-        fail()
+    val value = value()
+    if (value?.isEmpty() == true) {
+        fail("Value is empty, value=$value")
     }
 }

@@ -1,11 +1,12 @@
 package kr.co.finda.finda.gatabuta
 
-import org.junit.Assert.assertEquals
-import org.junit.Assert.fail
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.fail
 
 suspend fun <T : CharSequence> LiveDataTest<T>.isBlank() {
-    if (value()?.isNotBlank() == true) {
-        fail()
+    val value = value()
+    if (value?.isNotBlank() == true) {
+        fail("Value is not blank, value=$value")
     }
 }
 
@@ -14,8 +15,9 @@ suspend infix fun <T : CharSequence> LiveDataTest<T>.hasLength(expected: Int?) {
 }
 
 suspend fun <T : CharSequence> LiveDataTest<T>.isEmpty() {
-    if (value()?.isNotEmpty() == true) {
-        fail()
+    val value = value()
+    if (value?.isNotEmpty() == true) {
+        fail("Value is not empty, value=$value")
     }
 }
 

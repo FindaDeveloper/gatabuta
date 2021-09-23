@@ -25,6 +25,9 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    implementation 'junit:junit:4.13'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    def junitJupiterVersion = "5.7.0"
+    implementation "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion"
+    implementation "org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion"
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
 }
