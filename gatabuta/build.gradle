@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = 'com.github.kimdohun0104.gatabuta'
+group = 'com.github.FindaDeveloper.gatabuta'
 
 android {
     compileSdkVersion 30
